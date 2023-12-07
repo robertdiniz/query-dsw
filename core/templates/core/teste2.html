@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Exercise 01</title>
+</head>
+<body>
+    <h1>Query Exercise 01</h1>
+
+    <h2>a) Books of a Specific Author</h2>
+    {% for book in books_of_author %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>b) Books with Specific Tag</h2>
+    {% for book in books_with_tag %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>c) Authors with specific biographies</h2>
+    {% for author in authors_specific_bio %}
+        <p>{{ author.bio }}</p>
+    {% endfor %}
+
+    <h2>d) Highly rated books</h2>
+    {% for book in highly_rated_books %}
+        <p>{{ book }} - {{ book.rating }} - {{ book.book.author }} </p>
+    {% endfor %}
+
+    <h2>e) Profiles with specific websites</h2>
+    {% for user in specific_websites_users %}
+        <p>{{ user }} - {{ user.website }} </p>
+    {% endfor %}
+
+    <h2>f) Books without reviews</h2>
+    {% for book in books_without_review %}
+        <p>{{ book.title }} </p>
+    {% endfor %}
+
+    <h2>g) Tem que fazer ainda</h2>
+    <!-- {% for book in books_without_review %}
+        <p>{{ book.title }} </p>
+    {% endfor %} -->
+
+    <h2>h) Books with long summaries</h2>
+    {% for book in books_without_review %}
+        <p>{{ book.title }} </p>
+    {% endfor %}
+
+</body>
+</html>

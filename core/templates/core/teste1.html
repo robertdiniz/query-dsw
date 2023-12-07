@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Examples</title>
+</head>
+<body>
+    <h1>Query Examples</h1>
+
+    <h2>Books by Title</h2>
+    {% for book in books_by_title %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>Authors by Name</h2>
+    {% for author in authors_by_name %}
+        <p>{{ author.name }}</p>
+    {% endfor %}
+
+    <h2>Books with Specific Tag</h2>
+    {% for book in books_with_tag %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>Books of a Specific Author</h2>
+    {% for book in books_of_author %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2>Number of Books by a Specific Author</h2>
+    <p>{{ num_books_of_author }}</p>
+
+</body>
+</html>
