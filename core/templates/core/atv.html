@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atividade</title>
+</head>
+<body>
+    <h1>Atividade Consulta</h1>
+
+    <h2>Buscar todas resenhas que tenham uma avaliação maior ou igual a 4.</h2>
+    {% for review in livros_avaliacao_maior %}
+        <p>{{ review.book.title }} - {{ review.book.author }} </p>
+    {% endfor %}
+
+
+</body>
+</html>

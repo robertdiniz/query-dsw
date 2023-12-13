@@ -57,3 +57,15 @@ def query_exercise1(request):
     }
 
     return render(request, 'core/teste2.html', context)
+
+def atv_consulta(request):
+
+    livros_avaliacao_maior = Review.objects.filter(rating__gte=4)
+
+    print(livros_avaliacao_maior)
+
+    context = {
+        "livros_avaliacao_maior": livros_avaliacao_maior,
+    }
+
+    return render(request, 'core/atv.html', context)
